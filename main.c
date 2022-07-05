@@ -126,6 +126,8 @@ int choixBurger(int typeMenu) {
                     debutCommande();
                     break;
             }
+            choixAccompagnement();
+
             break;
         // Best Of & Maxi Best Of
         case 2:
@@ -204,6 +206,8 @@ int choixBurger(int typeMenu) {
                     debutCommande();
                     break;
             }
+            choixAccompagnement();
+
             break;
         // Signature
         case 6:
@@ -217,12 +221,23 @@ int choixBurger(int typeMenu) {
                 case 1:
                     printf("Vous avez choisi un BEEF BBQ\n");
                     break;
+                case 2:
+                    printf("Vous avez choisi un CHICKEN BBQ\n");
+                    break;
+                case 3:
+                    printf("Vous avez choisi un BLUE CHEESE & BACON\n");
+                    break;
 
                 default:
                     printf("Vous avez choisi aucun burger, retour au menu principal\n");
                     debutCommande();
                     break;
             }
+            choixAccompagnement();
+            break;
+        default:
+            printf("Vous avez choisi aucun menu, retour au menu principal\n");
+            debutCommande();
             break;
     }
     return 0;
