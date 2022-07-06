@@ -186,6 +186,8 @@ int choixBurger(int typeMenu) {
                     printf("Vous avez choisi aucun burger, retour au menu principal\n");
                     debutCommande();
                     break;
+
+                    choixAccompagnement();
             }
             break;
         // McFirst & Maxi McFirst
@@ -383,25 +385,28 @@ int choixBoisson(){
         default:
             printf("Vous avez choisi aucune boisson\n");
             break;
-
     }
+
     validerPanier();
     return 0;
+
 }
 
 int validerPanier() {
     printf("Voulez vous valider votre panier ? (o/n)\n");
     char reponse;
-    scanf("%c", &reponse);
+
+    // On demande à l'utilisateur si il souhaite valider le panier sinon on le remet au début du programme
+    scanf("%s", &reponse);
     if(reponse == 'o') {
         printf("Votre panier a ete valide\n");
-    } else {
-        printf("Vous n'avez pas valide votre panier, voulez vous commander un deuxième menu ?\n");
-        scanf("%c", &reponse);
-        if(reponse == 'o') {
-            choixMenu();
-        } else {
-            printf("Panier Annule\n");
-        }
+        return 0;
     }
+
+    else {
+        printf("Votre panier n'a pas ete valide\n");
+        debutCommande();
+        return 0;
+    }
+
 }
