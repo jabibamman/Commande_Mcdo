@@ -121,6 +121,10 @@ int choixBurger(int typeMenu) {
                     printf("Vous avez choisi un cheeseburger\n");
                     break;
 
+                case 2:
+                    printf("Retour au menu principal\n");
+                    debutCommande();
+                    break;
                 default:
                     printf("Vous avez choisi aucun burger, retour au menu principal\n");
                     debutCommande();
@@ -131,7 +135,7 @@ int choixBurger(int typeMenu) {
             break;
         // Best Of & Maxi Best Of
         case 2:
-                printf("=== Burger ===\n"
+            printf("=== Burger ===\n"
              "1. Cheeseburger\n"
               "2. Double Cheeseburger\n"
               "3. Triple Cheeseburger\n"
@@ -174,6 +178,10 @@ int choixBurger(int typeMenu) {
                 case 9:
                     printf("Vous avez choisi un 280 Original\n");
                     break;
+                case 10:
+                    printf("Vous avez choisi un retour au menu principal\n");
+                    debutCommande();
+                    break;
                 default:
                     printf("Vous avez choisi aucun burger, retour au menu principal\n");
                     debutCommande();
@@ -199,6 +207,11 @@ int choixBurger(int typeMenu) {
                     break;
                 case 3:
                     printf("Vous avez choisi un McFirst Poisson\n");
+                    break;
+
+                case 4:
+                    printf("Retour au menu principal\n");
+                    debutCommande();
                     break;
 
                 default:
@@ -242,12 +255,16 @@ int choixBurger(int typeMenu) {
     }
     return 0;
 }
-int choixAccompagnement(){
-    printf("=== Accompagnement ===\n");
-    printf("1. Wavy Fries\n");
-    printf("2. P'tite Salade\n");
-    printf("3. Frite\n");
-    printf("4. Retour\n");
+int choixAccompagnement() {
+    printf("=== Accompagnement ===\n"
+
+           "1. Wavy Fries\n"
+           "2. P'tite Salade\n"
+           "3. Frite\n"
+           "4. Retour\n"
+           "========================\n"
+    );
+
 
     int choix;
     scanf("%d", &choix);
@@ -261,23 +278,31 @@ int choixAccompagnement(){
         case 3:
             printf("Vous avez choisi la frite\n");
             break;
+
+        case 4:
+            printf("Retour au menu principal\n");
+            debutCommande();
+            break;
         default:
             printf("Vous avez choisi aucun accompagnement\n");
             break;
     }
+    choixSauce();
     return 0;
 }
 
 int choixSauce() {
-    printf("=== Sauce ===\n");
-    printf("1. Ketchup\n");
-    printf("2. Mayonnaise\n");
-    printf("3. Creamy Deluxe\n");
-    printf("4. Barbecue\n");
-    printf("5. Chinoise\n");
-    printf("6. Curry\n");
-    printf("7. Moutarde\n");
-    printf("8. Retour\n");
+    printf("=== Sauce ===\n"
+                "1. Ketchup\n"
+                "2. Mayonnaise\n"
+                "3. Creamy Deluxe\n"
+                "4. Barbecue\n"
+                "5. Chinoise\n"
+                "6. Curry\n"
+                "7. Moutarde\n"
+                "8. Retour\n"
+                "========================\n"
+            );
 
     int choix;
     scanf("%d", &choix);
@@ -303,22 +328,29 @@ int choixSauce() {
         case 7:
             printf("Vous avez choisi la moutarde\n");
             break;
+        case 8:
+            printf("Retour au menu principal\n");
+            debutCommande();
+            break;
         default:
             printf("Vous avez choisi aucune sauce\n");
             break;
     }
+    choixBoisson();
     return 0;
 }
 int choixBoisson(){
-    printf("=== Boisson ===\n");
-    printf("1. Coca-Cola\n");
-    printf("2. Coca-Cola Zero\n");
-    printf("3. Ice-Tea\n");
-    printf("4. Ice-Tea Green\n");
-    printf("5. Fanta\n");
-    printf("6. Eau\n");
-    printf("7. Eau Petillante\n");
-    printf("8. Retour\n");
+    printf("=== Boisson ===\n"
+                "1. Coca-Cola\n"
+                "2. Coca-Cola Zero\n"
+                "3. Ice-Tea\n"
+                "4. Ice-Tea Green\n"
+                "5. Fanta\n"
+                "6. Eau\n"
+                "7. Eau Petillante\n"
+                "8. Retour\n"
+                "========================\n"
+        );
 
     int choix;
     scanf("%d", &choix);
@@ -344,11 +376,16 @@ int choixBoisson(){
         case 7:
             printf("Vous avez choisi l'eau petillante\n");
             break;
+        case 8:
+            printf("Retour au menu principal\n");
+            debutCommande();
+            break;
         default:
             printf("Vous avez choisi aucune boisson\n");
             break;
 
     }
+    validerPanier();
     return 0;
 }
 
