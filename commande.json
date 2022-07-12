@@ -1,0 +1,171 @@
+{
+  "menu": [
+    {
+      "id": "1",
+      "name": "Happy Meal"
+    },
+    {
+      "id": "2",
+      "name": "Best Of"
+    },
+    {
+      "id": "3",
+      "name": "Maxi Best of"
+    },
+    {
+      "id": "4",
+      "name": "McFirst"
+    },
+    {
+      "id": "5",
+      "name": "Maxi McFirst"
+    },
+    {
+      "id": "6",
+      "name": "Signature"
+    },
+    {
+      "id": "7",
+      "name": "Retour"
+    }
+  ],
+
+  "burger": [
+    {
+      "id": "1",
+      "name": "Cheeseburger"
+    },
+    {
+      "id": "2",
+      "name": "Double Cheeseburger"
+    },
+    {
+      "id": "3",
+      "name": "Triple Cheeseburger"
+    },
+    {
+      "id": "4",
+      "name": "CBO"
+    },
+    {
+      "id": "5",
+      "name": "McWrap New-York"
+    },
+    {
+      "id": "6",
+      "name": "McWrap Chevre"
+    },
+    {
+      "id": "7",
+      "name": "Big Mac"
+    },
+    {
+      "id": "8",
+      "name": "Big Tasty"
+    },
+    {
+      "id": "9",
+      "name": "280 Original"
+    },
+    {
+      "id": "11",
+      "name": "McFirst Boeuf"
+    },
+    {
+      "id": "12",
+      "name": "McFirst Poulet"
+    },
+    {
+      "id": "13",
+      "name": "McFirst Poisson"
+    },
+    {
+      "id": "15",
+      "name": "BEEF BBQ"
+    },
+    {
+      "id": "16",
+      "name": "CHICKEN BBQ"
+    },
+    {
+      "id": "17",
+      "name": "BLUE CHEESE & BACON"
+    }
+  ],
+  "accompagnement": [
+    {
+      "id": "1",
+      "name": "Wavy Fries"
+    },
+    {
+      "id": "2",
+      "name": "P'tite Salade"
+    },    
+    {
+      "id": "3",
+      "name": "Frite"
+    }
+  ],
+  "sauces": [
+{
+      "id": "1",
+      "name": "Ketchup"
+    },
+    {
+      "id": "2",
+      "name": "Mayonnaise"
+    },
+    {
+      "id": "3",
+      "name": "Creamy Deluxe"
+    },
+    {
+      "id": "4",
+      "name": "Barbecue"
+    },
+    {
+      "id": "5",
+      "name": "Chinoise"
+    },
+    {
+      "id": "6",
+      "name": "Curry"
+    },
+    {
+      "id": "7",
+      "name": "Moutarde"
+    }
+
+  ],
+  "boissons": [
+    {
+      "id": "1",
+      "name": "Coca-Cola"
+    },
+    {
+      "id": "2",
+      "name": "Coca-Cola Zero"
+    },
+    {
+      "id": "3",
+      "name":"Ice-Tea"
+    },
+    {
+      "id": "4",
+      "name": "Ice-Tea Green"
+    },
+    {
+      "id": "5",
+        "name": "Fanta"
+    },
+    {
+      "id": "6",
+        "name": "Eau"
+    },
+    {
+      "id": "7",
+        "name": "Eau Petillante"
+    }
+  ]
+
+}
