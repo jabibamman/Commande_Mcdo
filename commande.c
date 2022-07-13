@@ -1,4 +1,7 @@
 #include <stdio.h>
+// TODO: include json-c/json.h
+//  creer le makefile
+//  réussir à utiliser le json-c
 
 void debutCommande(), choixMenu(), choixBurger(), choixAccompagnement(), choixSauce(), choixBoisson(), initPanier(), validerPanier();
 
