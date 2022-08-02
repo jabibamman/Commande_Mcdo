@@ -128,7 +128,9 @@ Pour plus d'exemples, veuillez vous référer à la [Documentation](https://gith
     - [✅] Méthodes  de prise de commande
 - [❌] Stocker les données du menu
 
-Voir les [problèmes ouverts](https://github.com/github_username/repo_name/issues) pour une liste complète des fonctionnalités proposées (et des problèmes connus).
+Voir la [Road Map détaillée](https://flashy-penalty-520.notion.site/73302a7693b444428f1d25e59d0bf86f?v=9d678a28eb134bcc984b42a0aa52488f)
+
+Voir aussi les [problèmes ouverts](https://github.com/github_username/repo_name/issues) pour une liste complète des fonctionnalités proposées (et des problèmes connus).
 
 <p align="right">(<a href="#top">retourner en haut</a>)</p>
 
