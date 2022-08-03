@@ -6,7 +6,7 @@ TODO:
     * Réaliser la méthode affichePanier() (problème dans la boucle)
 */
 
-void debutCommande(), choixMenu(), choixBurger(), choixAccompagnement(), choixSauce(), choixBoisson(), initPanier(), validerPanier();
+void debutCommande(), choixMenu(), choixBurger(), choixAccompagnement(), choixSauce(), choixBoisson(),validerPanier();
 
 
 void affichePanier(int pInt[1]);

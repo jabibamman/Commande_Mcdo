@@ -3,40 +3,60 @@
 //  creer le makefile
 //  réussir à utiliser le json-c
 
-void debutCommande(), choixMenu(), choixBurger(), choixAccompagnement(), choixSauce(), choixBoisson(), initPanier(), validerPanier();
+void debutCommande(), choixMenu(), choixBurger(), choixAccompagnement(), choixSauce(), choixBoisson(), validerPanier();
 
-int panier[100];
+
+int panier[100][100];
 
 int *ptrMenu, *ptrBurger, *ptrAccompagnement, *ptrSauce, *ptrBoisson;
 
 
 void affichePanier(int[]);
 
+/**
+ * @brief ajoutePanier
+ * @param pInt
+ * @return
+ * Ajoute au panier le menu, le burger, l'accompagnement, la sauce et la boisson
+ */
 void ajoutePanier() {
     printf("Ajout du panier\n");
     printf("Vous avez commmandez : %d Menu, %d Burger, %d Accompagnement, %d Sauce, %d Boisson\n", *ptrMenu, *ptrBurger, *ptrAccompagnement, *ptrSauce, *ptrBoisson);
 
-    // ajout des parametre au tableau panier
-    for (int i = 0; i < *ptrMenu; i++) {
-        panier[i] = *ptrMenu;
+    // ajouter le menu, le burger, l'accompagnement, la sauce et la boisson au tableau panier
+    panier[0][0] = *ptrMenu;
+    panier[0][1] = *ptrBurger;
+    panier[0][2] = *ptrAccompagnement;
+    panier[0][3] = *ptrSauce;
+    panier[0][4] = *ptrBoisson;
+
+
+    // Boucle affichant tout le tableau
+    for(int i = 0; i < 100; i++) {
+        for(int j = 0; j < 100; j++) {
+            printf("%d ", panier[i][j]);
+        }
+        printf("\n");
     }
-
-
-  affichePanier(panier);
-
 
     printf("Panier ajoute\n");
 }
 
-void affichePanier(int pInt[1]) {
-    printf("Voici votre panier :\n");
-    for (int i = 0; i < *ptrMenu; i++) {
-        panier[i] = *ptrMenu;
-        printf("%d\n", *ptrMenu);
-    }
+/**
+ * @brief affichePanier
+ * @param pInt
+ * @return
+ * Affiche le panier
+ */
+void affichePanier(int pInt[100]) {
 
 }
 
+/**
+ * @brief debutCommande
+ * @return
+ * Permet de commmander
+ */
 void debutCommande() {
 
     printf(  "=== Borne de commande ===\n"
@@ -75,6 +95,11 @@ void debutCommande() {
 
 }
 
+/**
+ * @brief choixMenu
+ * @return
+ * Permet de choisir le menu
+ */
 void choixMenu() {
     printf("=== Menu ===\n"
            "1. Happy Meal\n"
@@ -123,6 +148,11 @@ void choixMenu() {
     choixBurger();
 }
 
+/**
+ * @brief choixBurger
+ * @return
+ * Permet de choisir le burger
+ */
 void choixBurger() {
 
     // printf du pointeur
@@ -297,6 +327,11 @@ void choixBurger() {
 
 }
 
+/**
+ * @brief choixAccompagnement
+ * @return
+ * Permet de choisir l'accompagnement
+ */
 void choixAccompagnement() {
     int choix;
     ptrAccompagnement = &choix;
@@ -333,6 +368,11 @@ void choixAccompagnement() {
     choixSauce();
 }
 
+/**
+ * @brief choixSauce
+ * @return
+ * Permet de choisir la sauce
+ */
 void choixSauce() {
     int choix;
     ptrSauce = &choix;
@@ -382,6 +422,12 @@ void choixSauce() {
     }
     choixBoisson();
 }
+
+/**
+ * @brief choixBoisson
+ * @return
+ * Permet de choisir la boisson
+ */
 void choixBoisson() {
     int choix;
     ptrBoisson = &choix;
@@ -437,7 +483,11 @@ void choixBoisson() {
 
 }
 
-
+/**
+ * @brief validerPanier
+ * @return
+ * Permet de valider le panier
+ */
 void validerPanier() {
     printf("Voulez vous valider votre panier ? (o/n)\n");
     char reponse;
