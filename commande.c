@@ -1,15 +1,71 @@
 #include <stdio.h>
+#include <string.h>
+#include <malloc.h>
+
+//#define foreach(item, array) \
+//    for(int keep = 1, \
+//            count = 0,\
+//            size = sizeof (array) / sizeof *(array); \
+//        keep && count != size; \
+//        keep = !keep, count++) \
+//      for(item = (array) + count; keep; keep = !keep)
+//foreach(int *i, arr) {
+//printf("%d\n", *i);
+//}
 // TODO: include json-c/json.h
 //  creer le makefile
 //  réussir à utiliser le json-c
 
-void debutCommande(), choixMenu(), choixBurger(), choixAccompagnement(), choixSauce(), choixBoisson(), validerPanier();
+struct Menu {
+    int type;
+    int burger;
+    char accompagnement[20];
+    char sauce[20];
+    char boisson[20];
+};
 
+typedef struct Menu Menu;
+
+// setter
+void set_type(Menu *menu, int type) {
+    menu->type = type;
+}
+
+void set_burger(Menu *menu, int burger) {
+    menu->burger = burger;
+}
+
+void set_accompagnement(Menu *menu, char *accompagnement) {
+    strcpy(menu->accompagnement, accompagnement);
+}
+
+void set_sauce(Menu *menu, char *sauce) {
+    strcpy(menu->sauce, sauce);
+}
+
+void set_boisson(Menu *menu, char *boisson) {
+    strcpy(menu->boisson, boisson);
+}
+
+// Afficher le menu
+void afficher_menu(struct Menu *menu) {
+    printf("====================================");
+    printf("Menu %d\n", menu->type);
+    printf("Burger : %d\n", menu->burger);
+    printf("Accompagnement : %s\n", menu->accompagnement);
+    printf("Sauce : %s\n", menu->sauce);
+    printf("Boisson : %s\n", menu->boisson);
+    printf("====================================");
+
+}
+
+void debutCommande(), choixMenu(), choixBurger(), choixAccompagnement(), choixSauce(), choixBoisson(), validerPanier();
 
 int panier[100][100];
 
 int *ptrMenu, *ptrBurger, *ptrAccompagnement, *ptrSauce, *ptrBoisson;
-
+int id = 0;
+struct Menu menu;
 
 void affichePanier(int[]);
 
@@ -68,9 +124,14 @@ void debutCommande() {
              "6. Quitter\n"
              "========================\n"  );
     int choix;
+
+
+
     scanf("%d", &choix);
     switch (choix) {
         case 1:
+            // TODO : Créer un nouveau struct pour chaque id++
+            id++;
             choixMenu();
             break;
         case 2:
@@ -120,8 +181,7 @@ void choixMenu() {
 
     ptrMenu = &choix;
 
-    // pointeur sur menu
-
+    set_type(&menu, choix);
 
     switch (*ptrMenu) {
         // Happy Meal
@@ -159,7 +219,7 @@ void choixBurger() {
     printf("Vous avez choisi le menu %d\n", *ptrMenu);
 
     // Selon le type de menu, on affiche les burgers correspondants
-    switch (*ptrMenu) {
+    switch (menu.type) {
         int choix;
 
         // Happy Meal
@@ -172,9 +232,10 @@ void choixBurger() {
             scanf("%d", &choix);
 
             ptrBurger = &choix;
+            set_burger(&menu, choix);
 
 
-            switch (*ptrBurger) {
+            switch (menu.burger) {
                 case 1:
                     printf("Vous avez choisi un cheeseburger\n");
                     break;
@@ -209,9 +270,9 @@ void choixBurger() {
 
             scanf("%d", &choix);
 
-            ptrBurger = &choix;
+            set_burger(&menu,  choix);
 
-            switch (*ptrBurger) {
+            switch (menu.burger) {
                 case 1:
                     printf("Vous avez choisi un cheeseburger\n");
                     
@@ -266,9 +327,10 @@ void choixBurger() {
                    "========================\n"
             );
             scanf("%d", &choix);
-            ptrBurger = &choix;
 
-            switch (*ptrBurger) {
+            set_burger(&menu, choix);
+
+            switch (menu.burger) {
                 case 1:
                     printf("Vous avez choisi un McFirst Boeuf\n");
                     
@@ -297,8 +359,9 @@ void choixBurger() {
                    "4. Retour \n");
             scanf("%d", &choix);
             ptrBurger = &choix;
+            set_burger(&menu, choix);
 
-            switch (*ptrBurger) {
+            switch (menu.burger) {
                 case 1:
                     printf("Vous avez choisi un BEEF BBQ\n");
                     
